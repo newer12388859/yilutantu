@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>视频背景网页</title>
+    <style type="text/css">
+        .video_back {
+            /*设置视频最小宽度和高度*/
+            /*min-width: 100%;
+            min-height:100%;*/
+            /**/
+            width: 100% !important;
+            height: 100%;
+            /*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。可以根据实际情况修改*/
+            position: absolute;
+            /*这里我试了一下好像只要是矩形的四个角的的点都行,也就是说right:0;bottom:0;也可以*/
+            left: 0;
+            top: 0;
+            /*将视频放在元素的堆叠顺序最底层，以防覆盖其他东西*/
+            z-index: -9999;
+            /*被替换的内容正好填充元素的内容框。整个对象将完全填充此框。如果对象的宽高比与内容框不相匹配，那么该对象将被拉伸以适应内容框。*/
+            object-fit: fill;
+        }
+
+        #parent {
+            position: absolute;
+        }
+
+        .wen {
+            font-size: 30px;
+            color: #fff;
+        }
+
+        a {
+            color: rgb(252, 250, 250);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent" style="width:1920px;height:1080px;">
+        <!--
+    autoplay	autoplay如果出现该属性，则视频在就绪后马上播放。
+    controls	controls如果出现该属性，则向用户显示控件，比如播放按钮。
+    loop	loop如果出现该属性，则当媒介文件完成播放后再次开始播放。
+    muted	muted规定视频的音频输出应该被静音。
+    poster	URL	规定视频下载时显示的图像，或者在用户点击播放按钮前显示的图像。
+    preload	preload
+    如果出现该属性，则视频在页面加载时进行加载，并预备播放。
+    如果使用 "autoplay"，则忽略该属性。
+    src	 url要播放的视频的 URL。
+    width	pixels设置视频播放器的宽度。
+    height	pixels设置视频播放器的高度。-->
+        <video class="video_back" src="7月18日.mp4" muted autoplay="autoplay">
+
+        </video>
+        <div class="wen"><a href="shouye.html">返回首页</div>
+    </div>
+</body>
+
+</html>

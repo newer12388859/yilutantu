@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .nimg {
+            position: absolute;
+            /*绝对位移*/
+            left: 630px;
+            /*left 属性规定元素的左边缘。该属性定义了定位元素左外边距边界与其包含块左边界之间的偏移。*/
+            top: 10px;
+            /*top 属性规定元素的顶部边缘。该属性定义了一个定位元素的上外边距边界与其包含块上边界之间的偏移。*/
+        }
+    
+        td,
+        th,
+        .table1 {
+            border: 1px solid rgb(113, 113, 115);
+        }
+    
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    
+        .ntable {
+            left: 5px;
+            top: 5px;
+        }
+    
+        table {
+            border-collapse: collapse;
+        }
+    
+        .button2 {
+    
+            height: 50px;
+    border-radius: 10px;
+            width: 100px;
+    
+        }
+    
+        .button1 {
+    
+            height: 100px;
+    border-radius: 10px;
+            width: 150px;
+    
+        }
+        body{
+				margin: 0px;
+			}
+			.zhezhao{
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				background: #000;
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,0.5)
+			}
+			.tankuang{
+				position: relative;
+				background: #fff;
+				width: 60%;
+				height: 30%;
+				border-radius: 5px;
+				margin: 5% auto;
+			}
+			#header{
+				height: 40px;
+			}
+			#header-right{
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				border-radius: 5px;
+				background: red;
+				color: #fff;
+				right: 5px;
+				top: 5px;
+				text-align: center;
+			}
+
+
+            .btn {
+	width: 145px;
+	height: 50px;
+	font-size: 20px;
+	color: rgb(17, 16, 16);
+	background-color: aqua;
+	border: 0px;
+	border-radius: 10px
+}
+    </style>
+    
+</head>
+<body style="background-color:rgb(153, 180, 209) ;">
+    <table>
+        <caption>
+            <b>前景图像（左）与道路图像（右）</b>
+        </caption>
+        <tr>
+            <th>
+                 <img src="picture\OIP.jpg" width="600" title="前景图像">
+            </th>
+             <th>
+                <img src="picture\下载.jpg" width="780" title="道路图像" class="nimg">
+            </th>
+        </tr>
+    </table>
+    <br>
+    <div style="width: 600px; height: 500px; margin-left: 5px; margin-top: 30px;">
+        <table border="1" align="left">
+            <caption>
+                <b>当前飞机道信息</b>
+            <tr>
+                <th>
+                    实际长度：<input type="text" style="height:15px;width: 105.9px;" value="148.125m">
+                </th>
+                <th>
+                    计算宽度：<input type="text" style="height:15px;width: 105.9px;" value="11.49140">
+                </th>
+                <th>
+                    等效面积：<input type="text" style="height:15px;width: 105.9px;" value="45m^2">
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    &nbsp; &nbsp; &nbsp; &nbsp;类型：<input type="text" style="height:15px;width: 105.9px;" value="裂缝">
+                </th>
+                <th>
+                    &nbsp; &nbsp; &nbsp; 等级：<input type="text" style="height:15px;width: 105.9px;" value="重">
+                </th>
+                <th>
+                    &nbsp; &nbsp; &nbsp;PCI值:<input type="text" style="height:15px;width: 105.9px;" value="94.437895">
+                </th>
+            </tr>
+        </table><br>
+    </div>
+    <br>
+    <!-- ------------------------------------------------------------------ -->
+    <div style="width: 1000px; height: 500px; margin-left: 470px; margin-top: -490px;">
+        <table align="center" border="1" style="background-color: aliceblue;">
+            <tr>
+                <th>
+                    道路信息
+                </th>
+                <th>
+                    桩号
+                </th>
+                <th>
+                    经度
+                </th>
+                <th>
+                    纬度
+                </th>
+                <th>
+                    类型
+                </th>
+                <th>
+                    实际长度
+                </th>
+                <th>
+                    计算宽度
+                </th>
+                <th>
+                    等效面积
+                </th>
+                <th>
+                    PIC值
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    G02
+                </th>
+                <th>
+                    K180+103
+                </th>
+                <th>
+                    108.2291796
+                </th>
+                <th>
+                    34.3071295
+                </th>
+                <th>
+                    裂缝情况
+                </th>
+                <th>
+                    148.125m
+                </th>
+                <th>
+                    11.4914042...
+                </th>
+                <th>
+                    45m^2
+                </th>
+                <th>
+                    94.437895130...
+                </th>
+            </tr>
+        </table>
+    </div><br>
+    <!-- ---------------------------------------------------------------------------------- -->
+    <div style="width: 600px; height: 500px; margin-left: 5px; margin-top: -450px;">
+        <table border="1" style="background-color: aliceblue;">
+            <caption>
+                <b>历史道路信息</b>
+            <tr>
+                <th>
+                    编号
+                </th>
+                <th>
+                    道路信息
+                </th>
+                <th>
+                    桩号
+                </th>
+                <th>
+                    经度
+                </th>
+                <th>
+                    纬度
+                </th>
+                <th>
+                    类型
+                </th>
+                <th>
+                    实际长度
+                </th>
+                <th>
+                    计算宽度
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    1
+                </th>
+                <th>
+                    G02
+                </th>
+                <th>
+                    K180+452
+                </th>
+                <th>
+                    108.418...
+                </th>
+                <th>
+                    34.6652395
+                </th>
+                <th>
+                    裂缝情况
+                </th>
+                <th>
+                    371。97175m
+                </th>
+                <th>
+                    96.6983
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    2
+                </th>
+                <th>
+                    G02
+                </th>
+                <th>
+                    K180+774
+                </th>
+                <th>
+                    108.198...
+                </th>
+                <th>
+                    34.2206195
+                </th>
+                <th>
+                    坑槽情况
+                </th>
+                <th>
+                    350.328...
+                </th>
+                <th>
+                    33.3405
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    3
+                </th>
+                <th>
+                    G02
+                </th>
+                <th>
+                    K180+255
+                </th>
+                <th>
+                    108.748...
+                </th>
+                <th>
+                    34.2472095
+                </th>
+                <th>
+                    啃边情况
+                </th>
+                <th>
+                    129.082...
+                </th>
+                <th>
+                    6.9219
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    4
+                </th>
+                <th>
+                    G02
+                </th>
+                <th>
+                    K180+442
+                </th>
+                <th>
+                    108.845...
+                </th>
+                <th>
+                    34.9158695
+                </th>
+                <th>
+                    道路标示线情况
+                </th>
+                <th>
+                    148.125m
+                </th>
+                <th>
+                    11.4937
+                </th>
+            </tr>
+            <!-- <tr>
+                <th>
+                    5
+                </th>
+                <th>
+                    G0
+                </th>
+                <th>
+                    K280+229
+                </th>
+                <th>
+                    108.051...
+                </th>
+                <th>
+                    34.6837295
+                </th>
+                <th>
+                    纵缝
+                </th>
+                <th>
+                    1.03125m
+                </th>
+                <th>
+                    0.20052
+                </th>
+            </tr> -->
+        </table>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------- -->
+    <div style="width: 1000px; height: 500px; margin-left: 610px; margin-top: -450px;">
+        <table border="0">
+            <tr>
+                <td>
+                    <a href="#"><input type="submit" value="选择" style="background-color: aqua;" class="button2"></a>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                </td>
+    
+                <td>
+                    <a href="#"><input type="submit" value="上一页" style="background-color: aqua;" class="button2"></a>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                </td>
+                <td>
+                    <a href="#"><input type="submit" value="开始检测" style="background-color: aqua;" class="button1"></a>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                </td>
+                <td>
+                    <a href="#"><input type="submit" value="下一页" style="background-color: aqua;" class="button2"></a>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                </td>
+                <td>
+                    <a href="#"><input type="submit" value="保存路径" style="background-color: aqua;" class="button2"></a>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                </td>
+                <td>
+                    <a href="shouye.html"><input type="submit" value="返回首页" style="background-color: aqua;"
+                            class="button2"></a>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <!-- ----------------------------------------------------------------------------------------- -->
+    <div style="width: 600px; height: 500px; margin-left: 895px; margin-top: -475px;">
+        <button type="button" onclick="dianwo()" class="btn">开始检测</button>
+    </div>
+    
+    <div class="zhezhao" id='zhezhao'>
+        <div class="tankuang" style="background-color:rgb(153,180,209)">
+            <div id="header" style="background-color: #4e8ec5;">
+                <table align="center" border="1" style="background-color: aliceblue;">
+                    <caption>
+                        <b style="color:#ea0b0b;">飞机道该路段数据异常，请维修人员到场进行维护，消除安全隐患</b>
+                        <br><br>
+                    </caption>
+                    <br><br><br>
+                    <tr>
+                        <th>
+                            道路信息
+                        </th>
+                        <th>
+                            桩号
+                        </th>
+                        <th>
+                            经度
+                        </th>
+                        <th>
+                            纬度
+                        </th>
+                        <th>
+                            类型
+                        </th>
+                        <th>
+                            实际长度
+                        </th>
+                        <th>
+                            计算宽度
+                        </th>
+                        <th>
+                            等效面积
+                        </th>
+                        <th>
+                            PIC值
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            G02
+                        </th>
+                        <th>
+                            K180+103
+                        </th>
+                        <th>
+                            108.2291796
+                        </th>
+                        <th>
+                            34.3071295
+                        </th>
+                        <th>
+                            裂缝情况
+                        </th>
+                        <th>
+                            148.125m
+                        </th>
+                        <th>
+                            11.4914042...
+                        </th>
+                        <th>
+                            45m^2
+                        </th>
+                        <th>
+                            94.437895130...
+                        </th>
+                    </tr>
+                </table>
+                <div id="header-right" onclick="hidder()">x</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById('zhezhao').style.display = "none";
+        function dianwo() {
+            document.getElementById('zhezhao').style.display = "";
+        }
+        function hidder() {
+            document.getElementById('zhezhao').style.display = "none";
+        }
+
+
+    </script>
+</body>
+</html>
